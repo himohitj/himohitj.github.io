@@ -1,7 +1,42 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <title>My GitHub Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted on GitHub Pages.</p>
+    <h1>Welcome to My GitHub Page</h1>
+    
+    <!-- Your content goes here -->
+
+    <footer>
+        Last updated: <span id="lastUpdated"></span>
+    </footer>
+
+    <script>
+        // Get the current date
+        var currentDate = new Date();
+        
+        // Format the date as desired (e.g., July 15, 2023)
+        var formattedDate = currentDate.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+        
+        // Update the "lastUpdated" span element with the formatted date
+        document.getElementById("lastUpdated").textContent = formattedDate;
+    </script>
 </body>
 </html>
