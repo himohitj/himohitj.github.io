@@ -3,40 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>My GitHub Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        footer {
-            margin-top: 50px;
-            font-size: 12px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Welcome to My GitHub Page</h1>
     
     <!-- Your content goes here -->
 
+    <div style="height: 600px;">
+        <iframe src="https://www.playbook.com/e/xtron/LeQMSxa8A16RjQpnnL7ugCNC?theme=carousel&rows=1&slidesPerRow=3"
+            title="Xtron Posts - Playbook.com"
+            sandbox="allow-same-origin allow-scripts"
+            frameborder="0"
+            width="100%"
+            height="100%"
+        ></iframe>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://t.me/your_telegram_username" target="_blank" title="Telegram">
+            <img src="telegram-icon.png" alt="Telegram Icon" width="30" height="30">
+        </a>
+        <a href="https://github.com/your_github_username" target="_blank" title="GitHub">
+            <img src="github-icon.png" alt="GitHub Icon" width="30" height="30">
+        </a>
+        <a href="https://www.instagram.com/your_instagram_username" target="_blank" title="Instagram">
+            <img src="instagram-icon.png" alt="Instagram Icon" width="30" height="30">
+        </a>
+    </div>
+
     <footer>
-        Last updated: <span id="lastUpdated"></span>
+        Last updated: <span id="lastUpdatedDate"></span> at <span id="lastUpdatedTime"></span>
     </footer>
 
     <script>
-        // Get the current date
+        // Get the current date and time
         var currentDate = new Date();
-        
+
         // Format the date as desired (e.g., July 15, 2023)
         var formattedDate = currentDate.toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
             day: "numeric"
         });
-        
-        // Update the "lastUpdated" span element with the formatted date
-        document.getElementById("lastUpdated").textContent = formattedDate;
+
+        // Format the time as desired (e.g., 12:30 PM)
+        var formattedTime = currentDate.toLocaleTimeString("en-US", {
+            hour: "numeric",
+            minute: "numeric",
+            hour12: true
+        });
+
+        // Update the "lastUpdatedDate" and "lastUpdatedTime" span elements with the formatted date and time
+        document.getElementById("lastUpdatedDate").textContent = formattedDate;
+        document.getElementById("lastUpdatedTime").textContent = formattedTime;
     </script>
 </body>
 </html>
